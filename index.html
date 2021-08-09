@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html style="font-size: 59.8958px; overflow: hidden; height: 100%;">
+	<head>
+		<title></title>
+		
+		<meta charset="utf-8"/>
+		<!-- 内容宽度=设备宽度   缩放比例为1  最大缩放比例  是否允许用户缩放    -->
+		<meta name="viewprot" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabe= =no"/>
+		<!-- 是否打电话和发送emall文件 -->
+		<meta name="format-detection" content="telephone=no,emeil=no"/>
+		<!-- 渲染IE最新版本 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--[if lt IE 9]>
+ <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+ <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+ <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> 
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="css/fullpage.css"/> -->
+<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+
+<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="js/fullpage.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="overflow: hidden;height: 100%; font-size: 16px;">
+		<!-- <div class="navBtn am-animation-slide-right" id="navBtn"> 
+		   <img src="./images/nav-btn.png" alt="" /> 
+		  </div> 
+		  <div class="navBtnClose" id="navBtnClose"> 
+		   <img src="./images/banNavClose.png" alt="" />
+		  </div> -->
+		   <ul class="indexMenu am-animation-slide-right" id="indexMenu"> 
+		      <li data-menuanchor="page1" class="active"><a href="#page1"><em><img src="images/nav1.png" alt="" /></em> <span><img src="images/nav1-a.png" alt="" /></span> <p>首页</p> </a></li> 
+		      <li data-menuanchor="page2"><a href="#page2"><em><img src="images/nav2.png" alt="" /></em> <span><img src="images/nav2-a.png" alt="" /></span> <p>产品</p> </a></li> 
+		      <li data-menuanchor="page3"><a href="#page3"><em><img src="images/nav3.png" alt="" /></em> <span><img src="images/nav3-a.png" alt="" /></span> <p>技术</p> </a></li> 
+		      <li data-menuanchor="page4"><a href="#page4"><em><img src="images/nav4.png" alt="" /></em> <span><img src="images/nav4-a.png" alt="" /></span> <p>新闻</p> </a></li> 
+		      <li data-menuanchor="page5"><a href="#page5"><em><img src="images/nav5.png" alt="" /></em> <span><img src="images/nav5-a.png" alt="" /></span> <p>专题</p> </a></li> 
+		      <li data-menuanchor="page6"><a href="#page6"><em><img src="images/nav6.png" alt="" /></em> <span><img src="images/nav6-a.png" alt="" /></span> <p>责任</p> </a></li> 
+		      <li data-menuanchor="page7"><a href="#page7"><em><img src="images/nav7.png" alt="" /></em> <span><img src="images/nav7-a.png" alt="" /></span> <p>我们</p> </a></li> 
+		     </ul>
+		<div id="fullpage">
+			<div class="section">
+				<div class="">
+					<!-- header开始 -->
+					<!-- pid、移动端导航 -->
+					<nav class="none modal clearfix">
+						<div class="xa">
+							<p><span></span><span></span></p>
+						</div>
+						<ul>
+							<li><a href="#">繁體中文</a></li>
+							<li><a href="#">ENGLISH</a></li>
+							<li><a href="#">集团邮箱</a></li>
+							<li><a href="#">信息公开</a></li>
+						</ul>
+					</nav>
+					<header class="warp_header">
+						<div class="header">
+							<h1><img src="images/logo.png" ></h1>
+							
+							<nav>
+						<ul>
+							<li><a href="#">繁體中文</a></li>
+							<li><a href="#">ENGLISH</a></li>
+							<li><a href="#">集团邮箱</a></li>
+							<li><a href="#">信息公开</a></li>
+						</ul>
+							</nav>
+							<!-- pad端中间显示文字 -->
+							
+							<!-- pad端、移动端按钮 -->
+							<p class="none meun">
+								<span></span>
+								<span></span>
+								<span></span>
+							</p>
+						</div>
+					</header>
+				</div>
+				
+			</div>
+			<div class="section">我是第二屏</div>
+			<div class="section">我是第三屏</div>
+			<div class="section">我是第四屏</div>
+		</div>
+		
+		
+	</body>
+	<!-- <script>
+	$(function(){
+		//弹出导航
+		$("#navBtn").click(function(){
+			$(this).fadeOut()
+			$("#navBtnClose").fadeIn()
+			$(".nav").removeClass("navCloseDH").addClass("navDH")
+		})
+		//关闭导航
+		$("#navBtnClose").click(function(){
+			$(this).fadeOut()
+			$("#navBtn").fadeIn()
+			$(".nav").removeClass("navDH").addClass("navCloseDH")
+			//清空之前选中二级导航
+			//$(".indexNavTwo li").removeClass("active")
+		})
+		//打开二级导航
+		$(".navL li").eq(0).addClass("active");
+		$(".indexNavTwo").eq(0).addClass("active");
+		$(".indexNavTwo.active li").eq(0).addClass("active");
+		$(".navL li").mouseover(function() {
+			$(".indexNavTwo li").removeClass("active")
+			var index = $(this).index();
+			$(this).addClass("active").siblings().removeClass("active");
+			$(".indexNavTwo").eq(index).addClass("active").siblings().removeClass("active");
+		})
+		//打开三级导航
+		$(".indexNavTwo li").mouseover(function() {
+			$(this).addClass("active").siblings().removeClass("active");
+			//$(".indexNavTwo").eq(index).addClass("active").siblings().removeClass("active");
+		})
+	})
+	</script>
+	<script type="text/javascript">
+		// 初始化 fullpage 对象
+		var myFullpage = new fullpage('#fullpage',{
+			anchors:['firstPage','secondPage','thirdPage','fourthPage'],
+			menu:"#myMenu",
+			navigation:true,	//导航 小圆点 表示是否显示小圆点 默认false
+			navigationePosition:'right',	//导航位置 取值：left/right 默认right
+			navigationeTooltips:['第一屏','第二屏','第三屏','第四屏']
+		});
+	</script> -->
+</html>
